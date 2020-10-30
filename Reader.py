@@ -11,7 +11,7 @@ def parse_point(elem):
 def read_map(filename):
     reader = []
     with open(filename) as file:
-        info = file.readline()
+        info = ''.join(line for line in file)
     info = [x for x in info.split() if x]
     for elem in info:
         if elem[0] != '(' or elem[-1] != ')':
